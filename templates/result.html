@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BurnCheck - Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 40px;
+            background: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            color: #d9534f;
+            text-align: center;
+        }
+        .burnout-score {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .level-box {
+            font-size: 2em;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #ffdddd;
+            border-left: 6px solid #d9534f;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .tip {
+            background-color: #d9edf7;
+            padding: 10px;
+            border-left: 6px solid #31708f;
+            margin-bottom: 10px;
+        }
+        .motivational {
+            font-style: italic;
+            color: #5cb85c;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 BurnCheck Result</h1>
+
+        <div class="burnout-score">
+            <strong>Burnout Score:</strong> {{ prediction_score }}
+        </div>
+
+        <div class="level-box">
+            <strong>Burnout Level:</strong> {{ prediction_level }}
+        </div>
+
+        <div class="section">
+            <h3>Top 3 Contributing Factors:</h3>
+            <ul>
+                {% for factor in top_factors %}
+                    <li>{{ factor }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Recommended Tips:</h3>
+            {% for tip in tips %}
+                <div class="tip">{{ tip }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="section motivational">
+            {{ message }}
+        </div>
+    </div>
+</body>
+</html>

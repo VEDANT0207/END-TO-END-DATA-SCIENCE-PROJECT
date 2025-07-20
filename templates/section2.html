@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BurnCheck – Section 2</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>BurnCheck</h1>
+    <h2>Section 2: Workplace Environment & Mental Health</h2>
+
+    <form action="{{ url_for('section3') }}" method="post">
+      {% for key, value in previous_data.items() %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}">
+      {% endfor %}
+
+      <label>Work Interfere (How often does work interfere with mental health?):</label>
+      <select name="work_interfere" required>
+        <option value="0">Never</option>
+        <option value="1">Rarely</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+      </select>
+
+      <label>Family History of Mental Illness:</label>
+      <select name="family_history" required>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <label>Care Options Available at Work:</label>
+      <select name="care_options" required>
+        <option value="0">No</option>
+        <option value="1">Not Sure</option>
+        <option value="2">Yes</option>
+      </select>
+
+      <label>Wellness Program at Work:</label>
+      <select name="wellness_program" required>
+        <option value="0">No</option>
+        <option value="1">Not Sure</option>
+        <option value="2">Yes</option>
+      </select>
+
+      <label>Mental Health Coverage in Benefits:</label>
+      <select name="benefits" required>
+        <option value="0">No</option>
+        <option value="1">Not Sure</option>
+        <option value="2">Yes</option>
+      </select>
+
+      <!-- <label for="phys_health_consequence">Consequence to Physical Health from Mental Health Issues:</label>
+      <select name="phys_health_consequence" required>
+        <option value="0">No</option>
+        <option value="1">Maybe</option>
+        <option value="2">Yes</option>
+      </select> -->
+
+      <button type="submit">Next</button>
+    </form>
+  </div>
+</body>
+</html>

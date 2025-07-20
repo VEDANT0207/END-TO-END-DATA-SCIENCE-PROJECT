@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BurnCheck – Section 3</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>BurnCheck</h1>
+    <h2>Section 3: Support System & Coping Mechanisms</h2>
+
+    <form action="{{ url_for('result') }}" method="post">
+      {% for key, value in previous_data.items() %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}">
+      {% endfor %}
+
+      <label>Seek Help for Mental Health:</label>
+      <select name="seek_help" required>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        <option value="2">Sometimes</option>
+      </select>
+
+      <label>Comfortable Discussing Mental Health with Coworkers:</label>
+      <select name="coworkers" required>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        <option value="2">Somewhat</option>
+      </select>
+
+      <label>Comfortable Discussing Mental Health with Supervisor:</label>
+      <select name="supervisor" required>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        <option value="2">Somewhat</option>
+      </select>
+
+      <label>Observed Negative Consequences of Discussing Mental Health at Work:</label>
+      <select name="mental_health_consequence" required>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <label>Gender:</label>
+      <select name="gender" required>
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+        <option value="2">Other</option>
+      </select>
+
+      <label>Age:</label>
+      <input type="number" name="age" min="16" max="100" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
