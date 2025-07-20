@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BurnCheck - Work & Company</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f2f2f2; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; }
+        button { margin-top: 20px; width: 100%; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; }
+        button:hover { background: #45a049; cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>BurnCheck – Work & Company Section</h2>
+    <form method="post" action="{{ url_for('section2') }}">
+        <label for="work_interfere">How often does mental health interfere with your work?</label>
+        <select name="work_interfere" required>
+            <option value="0">Never</option>
+            <option value="1">Rarely</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+        </select>
+
+        <label for="remote_work">Do you work remotely?</label>
+        <select name="remote_work" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="tech_company">Are you part of a tech company?</label>
+        <select name="tech_company" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="benefits">Are mental health benefits provided?</label>
+        <select name="benefits" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+            <option value="2">Don't Know</option>
+        </select>
+
+        <label for="care_options">Does your employer provide care options?</label>
+        <select name="care_options" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+            <option value="2">Not Sure</option>
+        </select>
+
+        <label for="wellness_program">Is there a wellness program at work?</label>
+        <select name="wellness_program" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="seek_help">Do you feel comfortable seeking help?</label>
+        <select name="seek_help" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+            <option value="2">Don't Know</option>
+        </select>
+
+        <label for="leave">How easy is it to take mental health leave?</label>
+        <select name="leave" required>
+            <option value="0">Very Difficult</option>
+            <option value="1">Somewhat Difficult</option>
+            <option value="2">Don't Know</option>
+            <option value="3">Somewhat Easy</option>
+            <option value="4">Very Easy</option>
+        </select>
+
+        <label for="anonymity">Is anonymity protected if you take leave?</label>
+        <select name="anonymity" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+            <option value="2">Don't Know</option>
+        </select>
+
+        <button type="submit">Next → Section 2</button>
+    </form>
+</div>
+</body>
+</html>
