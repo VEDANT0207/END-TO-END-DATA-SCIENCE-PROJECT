@@ -28,3 +28,4 @@ This project serves multiple purposes. First, it acts as a portfolio-worthy demo
 
 In conclusion, this mental health prediction web app demonstrates how machine learning can be applied responsibly and effectively in areas that matter. It showcases not only technical skills but also empathy and problem-solving applied to real-world issues. The project reflects a strong grasp of full-stack data science and serves as an impactful example of how AI can be used to create awareness, drive meaningful conversations, and encourage early reflection or action when it comes to mental wellness.
 
+<img width="1057" height="831" alt="Image" src="https://github.com/user-attachments/assets/3feef06a-3aee-44d3-af7b-ad0dac79bf3b" />
